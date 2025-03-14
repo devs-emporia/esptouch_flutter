@@ -309,7 +309,7 @@ class TaskRouteState extends State<TaskRoute> {
                 onLongPress: copyValue(context, 'BSSID', result.bssid),
                 child: Row(
                   children: <Widget>[
-                    Text('BSSID: ', style: textTheme.bodyText1),
+                    Text('BSSID: ', style: textTheme.bodyLarge),
                     Text(result.bssid,
                         style: TextStyle(fontFamily: 'monospace')),
                   ],
@@ -319,7 +319,7 @@ class TaskRouteState extends State<TaskRoute> {
                 onLongPress: copyValue(context, 'IP', result.ip),
                 child: Row(
                   children: <Widget>[
-                    Text('IP: ', style: textTheme.bodyText1),
+                    Text('IP: ', style: textTheme.bodyLarge),
                     Text(result.ip, style: TextStyle(fontFamily: 'monospace')),
                   ],
                 ),

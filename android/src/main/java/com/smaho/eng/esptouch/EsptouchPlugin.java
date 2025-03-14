@@ -15,22 +15,11 @@ import io.flutter.embedding.engine.plugins.activity.ActivityAware;
 import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding;
 import io.flutter.plugin.common.BinaryMessenger;
 import io.flutter.plugin.common.EventChannel;
-import io.flutter.plugin.common.PluginRegistry.Registrar;
-
 
 /** EsptouchPlugin */
 public class EsptouchPlugin implements EventChannel.StreamHandler, FlutterPlugin, ActivityAware {
   private static final String TAG = "EsptouchPlugin";
   private static final String CHANNEL_NAME= "eng.smaho.com/esptouch_plugin/results";
-
-  /** backward compatibility with embedding v1 **/
-  @SuppressWarnings("deprecation") // Registrar deprecated (v1 plugin embedding).
-  public static void registerWith(Registrar registrar) {
-    EsptouchPlugin plugin = new EsptouchPlugin();
-    plugin.activity = registrar.activity();
-    plugin.context = registrar.context();
-    plugin.setupMethodChannel(registrar.messenger());
-  }
 
   private EventChannel channel;
   private Activity activity;
